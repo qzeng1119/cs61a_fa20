@@ -237,9 +237,7 @@ def has_path(t, word):
     "*** YOUR CODE HERE ***"
     if len(word) == 1:
         return label(t) == word
-    elif is_leaf(t):
-        return False
-    elif label(t) != word[0]:
+    elif is_leaf(t) or label(t) != word[0]:
         return False
     for b in branches(t):
         if has_path(b, word[1:]):
