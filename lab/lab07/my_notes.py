@@ -22,4 +22,9 @@ same address as the corresponding element from the old list.
 >>> b = a[:]
 >>> a[1] is b[1]
 True
+
+Extention: other example of *shallow copy*
+list2 = list(list1)
+list2 = list(tuple1)
+tuple2 = tuple(list1)
 """
