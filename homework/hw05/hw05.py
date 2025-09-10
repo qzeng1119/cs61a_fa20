@@ -45,6 +45,8 @@ class VendingMachine:
     def vend(self):
         if self.amount == 0:
             return 'Inventory empty. Restocking required.'
+        # If you need to compare two values multiple times, then get the difference first.
+        # For the example below, let d = self.funds - self.price
         elif self.funds < self.price:
             return 'You must add ${0} more funds.'.format(self.price - self.funds)
         elif self.funds == self.price:
